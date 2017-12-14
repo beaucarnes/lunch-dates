@@ -24,7 +24,8 @@ class LunchDate < ActiveRecord::Base
             shuffled_teammates = shuffled_teammates.concat(Teammate.all.shuffle)
             break if shuffled_teammates.length >= work_days.length * 2
         end
-        
+        puts "!!!!!!!!!!!!!!!!!"
+        puts shuffled_teammates.length
         # Create lunch dates, making sure people don't pay more than three times (first teammate pays)
         count = {}
         work_days.each_with_index do |work_day, i|
@@ -46,6 +47,7 @@ class LunchDate < ActiveRecord::Base
                 else # Find next person in shuffled list who has payed for less than three lunches
                     if i2 < shuffled_teammates.length
                         ((i2 + 1)..shuffled_teammates.length).each do |n|
+                            puts "%%%%%%%%%%", n
                             if count.key?(shuffled_teammates[n][:name])  && count[shuffled_teammates[n][:name]] < 3
                                 # Swap
                                 shuffled_teammates[i1], shuffled_teammates[n] = shuffled_teammates[n], shuffled_teammates[i1]
