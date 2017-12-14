@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @teammate.name %>'s lunch dates this month</h1>
+<div class="card">
+  <div class="card-block">
+    <div class="text-center">
+      <%= link_to 'Edit Account', edit_teammate_path(@teammate) %> |
+      <%= link_to 'Back to Teammates', teammates_path %>
+    </div>
+    <div class="text-center">
+      <% @lunchdates.each do |date| %>
+       <p></p><span class="badge badge-secondary"><%= date[:date] %></span>
+       Lunch with <strong><%= date[:teammate] %></strong>
+       <% if date[:pay] %> (paying)<% end %></p>
+      <% end %>      
+    </div>
+  </div>
+</div>  

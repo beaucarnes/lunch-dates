@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<h1>Teammates</h1>
+  <div class="row">
+  <% @teammates.each do |teammate| %>
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title"><%= teammate.name %></h4>
+          <h6 class="card-subtitle mb-2 text-muted"><%= teammate.location %></h6>
+          <p class="card-text clearfix"><% if teammate.pic_url %><img src="<%= teammate.pic_url %>"><% end %><%= teammate.bio %></p>
+            <%= link_to 'Show Lunch Dates', teammate, class: "btn btn-sm btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+<%= link_to 'New Teammate', new_teammate_path, class: "btn btn-success" %>
