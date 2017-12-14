@@ -45,8 +45,8 @@ class LunchDate < ActiveRecord::Base
                     # If so, swap with first teammate
                     shuffled_teammates[i1], shuffled_teammates[i2] = shuffled_teammates[i2], shuffled_teammates[i1]
                 else # Find next person in shuffled list who has payed for less than three lunches
-                    if i2 < shuffled_teammates.length
-                        ((i2 + 1)..shuffled_teammates.length).each do |n|
+                    if i2 < shuffled_teammates.length - 1
+                        ((i2 + 1)..shuffled_teammates.length - 1).each do |n|
                             puts "%%%%%%%%%%", n
                             if count.key?(shuffled_teammates[n][:name])  && count[shuffled_teammates[n][:name]] < 3
                                 # Swap
