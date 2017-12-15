@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :teammates
   
+  root 'application#index'
+  resources :teammates
   get 'lunchdates', to: 'lunchdates#index'
   get 'lunchdates/create'
 

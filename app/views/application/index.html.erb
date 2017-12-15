@@ -1,0 +1,12 @@
+<div class="jumbotron text-center" style="margin-top: 50px;">
+    <h1 class="display-3">Lunch Dates</h1>
+    <p class="lead">Automatically match up teammates to have lunch together!</p>
+    <p><%= link_to 'Teammates', teammates_path, class: "btn btn-lg btn-success", role: "button" %>
+      <%= link_to 'Lunch Schedule', teammates_path, class: "btn btn-lg btn-success", role: "button" %></p>
+    <div class="card" style="width: 20rem; margin: 0 auto;">
+      <div class="card-body">
+        <h4 class="card-title">Today's Lunch Date</h4>
+        <p class="card-text"><strong><%= @lunchdate.teammate_a.name %></strong> is treating <strong><%= @lunchdate.teammate_b.name %></strong> to lunch.</p>
+      </div>
+    </div>
+</div>

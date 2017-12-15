@@ -1,7 +1,9 @@
 <h1>Editing Teammate</h1>
 <div class="card">
-    <div class="card-block">
-<%= render 'form' %>
-
-<%= link_to 'Back', @teammate %> |
-<%= link_to 'Destroy', @teammate, method: :delete, data: { confirm: 'Are you sure?' } %> 
+    <div class="card-block text-center">
+        <%= render 'form' %>
+        
+        <%= link_to 'Back', @teammate %> |
+        <%= link_to 'Destroy', @teammate, method: :delete, data: { confirm: 'Are you sure?' } %> 
+    </div>
+</div>
