@@ -6,7 +6,16 @@
     <div class="card" style="width: 20rem; margin: 0 auto;">
       <div class="card-body">
         <h4 class="card-title">Today's Lunch Date</h4>
-        <p class="card-text"><strong><%= @lunchdate.teammate_a.name %></strong> is treating <strong><%= @lunchdate.teammate_b.name %></strong> to lunch.</p>
+        <p class="card-text">
+          <% if @lunchdate %>
+          <strong><%= @lunchdate.teammate_a.name %></strong> is treating <strong><%= @lunchdate.teammate_b.name %></strong> to lunch.
+          <% else %>
+          No lunch date scheduled today.
+          <% end %>
+          <% if Date.today.saturday? || Date.today.sunday? %>
+          <br> <i>Lunches only scheduled on weekdays.</i>
+          <% end %>
+        </p>
       </div>
     </div>
 </div>

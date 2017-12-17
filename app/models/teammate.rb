@@ -14,7 +14,6 @@ class Teammate < ActiveRecord::Base
         all_dates.push({teammate: date.teammate_a.name, date: date.date, pay: false})
       end
       all_dates.sort_by!{|date| date[:date]}
-      puts all_dates.to_json
       return all_dates
     end
     

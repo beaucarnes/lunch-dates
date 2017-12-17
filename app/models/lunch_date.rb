@@ -57,6 +57,7 @@ class LunchDate < ActiveRecord::Base
             
             count[shuffled_teammates[i1][:name]] = count[shuffled_teammates[i1][:name]] ? count[shuffled_teammates[i1][:name]] + 1 : 1
             LunchDate.create(teammate_a: shuffled_teammates[i1], teammate_b: shuffled_teammates[i2], date: work_day)
+            
         end        
     end
     

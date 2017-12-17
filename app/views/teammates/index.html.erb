@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'New Teammate', new_teammate_path, class: "btn btn-success float-right" %>
 <h1>Teammates</h1>
   <div class="row">
   <% @teammates.each do |teammate| %>
@@ -14,4 +15,4 @@
     </div>
   <% end %>
   </div>
-<%= link_to 'New Teammate', new_teammate_path, class: "btn btn-success" %>
+

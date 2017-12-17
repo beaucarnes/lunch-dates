@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= link_to "Recreate Lunch Dates", lunchdates_create_path, class: "btn btn-danger float-right" %>
 <h1>Full Schedule</h1>
 <ul class="list-group">
 <% @lunchdates.each do |date| %>
@@ -6,5 +7,5 @@
   <strong><%= link_to date.teammate_a.name, date.teammate_a %></strong> is treating <strong><%= link_to date.teammate_b.name, date.teammate_b %></strong> </strong> to lunch.</li>
 <% end %>
 </ul>
-<%= link_to "Recreate Lunch Dates", lunchdates_create_path, class: "btn btn-danger" %>
+
 

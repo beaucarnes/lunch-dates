@@ -1,9 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  twitter_username: MyString
+  name: Beau
+  twitter_username: CarnesBeau
 
 two:
-  name: MyString
-  twitter_username: MyString
+  name: Judah
+  twitter_username: dhh
+  
+three:
+  name: Corwin
+  twitter_username: dhh
+  
+four:
+  name: David
+  twitter_username: dhh
+  
+five:
+  name: Kendall
+  twitter_username: dhh
+  
+six:
+  name: Teagan
+  twitter_username: dhh
+  
+seven:
+  name: Elon
+  twitter_username: dhh
+  
+eight:
+  name: Steven
+  twitter_username: dhh

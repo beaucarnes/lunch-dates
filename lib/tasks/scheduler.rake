@@ -19,6 +19,16 @@ namespace :scheduler do
     end
     
     task :send_reminder => :environment do
+      today = Date.today
+      if !today.saturday? && !today.sunday?
+        puts "Sending reminder of lunch date."
+        LunchdateMailer.lunchdate_notification().deliver_now
+      else
+        puts "Not sending reminder since it is a weekend."
+      end
+    end
+    
+    task :send_reminder_even_if_weekend => :environment do
       puts "Sending reminder of lunch date."
       LunchdateMailer.lunchdate_notification().deliver_now
     end

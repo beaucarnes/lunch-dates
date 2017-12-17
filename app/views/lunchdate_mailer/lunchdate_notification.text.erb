@@ -3,7 +3,11 @@ as part of his application for employment at Elevator Up.
 ---
 <%= Date.today %>
 
+<% if @lunchdate %>
 Today, <%= @lunchdate.teammate_a.name %> is treating <%= @lunchdate.teammate_b.name %> to lunch.
+<% else %>
+No lunch date scheduled today.
+<% end %>
 
 Check out the Lunch Dates site for more information.
 

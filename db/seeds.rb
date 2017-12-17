@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Teammate.create(name: 'Beau')
+Teammate.create(name: 'Kendell')
+Teammate.create(name: 'Aaron')
+Teammate.create(name: 'Jim')
+Teammate.create(name: 'Teagan')
+Teammate.create(name: 'Judah')
+Teammate.create(name: 'Corwin')
+Teammate.create(name: 'Elon')

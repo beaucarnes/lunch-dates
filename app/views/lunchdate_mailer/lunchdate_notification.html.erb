@@ -3,5 +3,9 @@
   as part of his application for employment at Elevator Up.
 <br>---</p>
 <p><strong><%= Date.today %></strong> - 
+<% if @lunchdate %>
 Today, <%= @lunchdate.teammate_a.name %> is treating <%= @lunchdate.teammate_b.name %> to lunch.</p>
+<% else %>
+No lunch date scheduled today.</p>
+<% end %>
 <p>Check out the <a href="https://guarded-shore-57371.herokuapp.com">Lunch Dates site</a> for more information.</p>
